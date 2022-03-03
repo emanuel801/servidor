@@ -7,6 +7,7 @@ const servidor = http.createServer(app);
 //Inicializamos socketio
 const socketio = require("socket.io");
 const io = socketio(servidor);
+io.set('origins', '*:*');
 
 //Funcionalidad de socket.io en el servidor
 io.on("connection", (socket) => {
